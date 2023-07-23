@@ -13,14 +13,6 @@ cmake_minimum_required(VERSION 3.4.1)
 
 project("frame-sequence")
 
-file(GLOB_RECURSE GIF_LIB ${CMAKE_SOURCE_DIR}/src/main/cpp/gif/*.c)
-add_library(native-gif
-            STATIC
-            ${GIF_LIB}
-)
-#引入gif静态库头文件目录
-include_directories(src/main/cpp/gif)
-
 file(GLOB_RECURSE WEBP_DEC_LIB ${CMAKE_SOURCE_DIR}/src/main/cpp/webp/dec/*.c)
 file(GLOB_RECURSE WEBP_DSP_LIB ${CMAKE_SOURCE_DIR}/src/main/cpp/webp/dsp/*.c)
 file(GLOB_RECURSE WEBP_UTILS_LIB ${CMAKE_SOURCE_DIR}/src/main/cpp/webp/utils/*.c)
@@ -47,7 +39,6 @@ find_library(log-lib
 )
 
 target_link_libraries(frame-sequence
-                        native-gif
                         native-webp
 
                         android

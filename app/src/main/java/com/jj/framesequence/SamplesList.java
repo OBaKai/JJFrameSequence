@@ -43,7 +43,7 @@ public class SamplesList extends ListActivity {
 
     static final ArrayList<Map<String,?>> SAMPLES = new ArrayList<>();
     static {
-        SAMPLES.add(makeSample("GIF animation", FrameSequenceTest.class, R.raw.animated_gif));
+//        SAMPLES.add(makeSample("GIF animation", FrameSequenceTest.class, R.raw.animated_gif));
         SAMPLES.add(makeSample("WEBP animation", FrameSequenceTest.class, R.raw.animated_webp));
     }
 
